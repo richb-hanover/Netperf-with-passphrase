@@ -40,14 +40,13 @@ const createImageFromText = async (text) => {
   const width = 90;
   const height = 20;
 
-  text = "Foxy-happy" // test text to check image generation
+  // text = "Foxy-happy" // test text to check image generation
   // SVG string for the image with 12-point sans-serif font
   const svgImage = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="auto">
-    <rect width="100%" height="100%" fill="white"/>
-    <text x="0" y="12" font-size="16" fill="black" font-family="sans-serif">${text}</text>
-    </svg>
-
+ <svg xmlns="http://www.w3.org/2000/svg" width="auto" height="20">
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="0" y="16" font-size="16" font-family="monospace" fill="black">${text}</text>
+</svg>
   `;
 
   // Create image from SVG using Sharp

@@ -2,9 +2,9 @@
 
 **netperf** is a network performance measurement tool 
      ([github.com/HewlettPackard/netperf/](https://github.com/HewlettPackard/netperf/blob/master/README)</a>).
-     It relies on two programs running on separate computers:
+     It relies on programs running on separate computers:
 
-* a **netserver** that listens for commands from ... 
+* a **netserver** program that listens for commands from ... 
 * a **netperf client** that sends those commands at the user's direction.
 
 This server is a **netserver**.
