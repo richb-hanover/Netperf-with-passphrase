@@ -10,7 +10,7 @@ const sharp = require('sharp'); // Import sharp
 const app = express();
 
 // List of words for passphrase generation
-const words = ['apple', 'banana', 'cherry', 'dog', 'elephant', 'fox', 'giraffe', 'hat', 'igloo', 'jelly', 'kite', 'lemon'];
+const words = ["from", "that", "this", "with", "your", "have", "more", "will", "home", "page", "free", "time", "they", "site", "what", "news", "only", "when", "here", "also", "help", "view", "been", "were", "some", "like", "than", "find", "date", "back", "list", "name", "just", "over", "year", "into", "next", "used", "work", "last", "most", "data", "make", "them", "post", "city", "such", "best", "then", "good"];
 
 // Function to get the host's IP address
 const getIPAddress = () => {
@@ -80,7 +80,7 @@ const renderMarkdownFile = async (filePath, res) => {
     res.send(`
       <html>
         <head>
-          <title>My Markdown Site</title>
+          <title>netperf.bufferbloat.net</title>
           <link rel="stylesheet" href="/styles.css">
         </head>
         <body>

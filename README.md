@@ -1,3 +1,21 @@
+# README
+
+This site runs as a Node.js app.
+To launch it, `node app.js` and it will serve the site on
+port 3000.
+Adjust the proxy stuff in Apache to vector its port 80 to port 3000...
+
+Apache2 is running on port 80, and uses a virtual host for netperf.richb-hanover.com 
+to proxy to the node process that's listening on port 3000.
+
+Get the source to this project from <a href="https://github.com/richb-hanover/netperfmon">Github.com.</a></p>
+
+TO DO:
+
+It is also necessary to coordinate the passphrase displayed
+by the Node app and the one used by `netserver -Z {{passphrase}}`
+
+## ChatGPT sez...
 To create a website with a Markdown-composed homepage that displays text and a random two-word passphrase based on the current date, you can use a static site generator like Jekyll or Hugo with a simple custom script to generate the passphrase.
 
 Here's how you can do it with Jekyll as an example:
