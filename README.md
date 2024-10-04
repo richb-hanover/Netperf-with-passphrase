@@ -3,7 +3,7 @@
 This site runs as a Node.js app.
 To launch it, `node app.js` and it will serve the site on
 port 3000.
-Adjust the proxy stuff in Apache to vector its port 80 to port 3000...
+Adjust the proxy stuff in Apache to vector port 80 to port 3000...
 
 Apache2 is running on port 80, and uses a virtual host for netperf.richb-hanover.com 
 to proxy to the node process that's listening on port 3000.

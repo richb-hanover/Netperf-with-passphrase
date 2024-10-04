@@ -4,6 +4,8 @@
   "description": "Website to provide passphrase for netperf server at netperf.bufferbloat.net",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "dev": "npm run start & browser-sync start --config bs-config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rich Brown <richb.hanover@gmail.com> (http://richb-hanover.com/)",
@@ -11,7 +13,6 @@
   "dependencies": {
     "canvas": "^2.11.2",
     "express": "^4.21.0",
-    "expresss": "^0.0.0",
     "marked": "^14.1.2",
     "sharp": "^0.33.5"
   }

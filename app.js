@@ -9,6 +9,9 @@ const sharp = require('sharp'); // Import sharp
 
 const app = express();
 
+let dateSeed = "initial-seed";
+let seed = 1234;
+
 // List of words for passphrase generation
 const words = ["from", "that", "this", "with", "your", "have", "more", "will", "home", "page", "free", "time", "they", "site", "what", "news", "only", "when", "here", "also", "help", "view", "been", "were", "some", "like", "than", "find", "date", "back", "list", "name", "just", "over", "year", "into", "next", "used", "work", "last", "most", "data", "make", "them", "post", "city", "such", "best", "then", "good"];
 
@@ -27,9 +30,9 @@ const getIPAddress = () => {
 
 // Function to generate a passphrase based on the current date and IP address
 const generatePassphrase = () => {
-  const dateSeed = new Date().toISOString().slice(0, 10);  // Use YYYY-MM-DD format
+  dateSeed = new Date().toISOString().slice(0, 10);  // Use YYYY-MM-DD format
   const ipAddress = getIPAddress().split('.').reduce((acc, val) => acc + parseInt(val), 0);  // Reduce IP address digits
-  let seed = dateSeed.split('-').reduce((acc, val) => acc + parseInt(val), ipAddress); // Add IP and date together
+  seed = dateSeed.split(':').reduce((acc, val) => acc + parseInt(val), ipAddress); // Add IP and date together
   const firstWord = words[seed % words.length];
   const secondWord = words[(seed * 2) % words.length];
   return `${firstWord}-${secondWord}`;
@@ -84,6 +87,8 @@ const renderMarkdownFile = async (filePath, res) => {
           <link rel="stylesheet" href="/styles.css">
         </head>
         <body>
+          ${dateSeed} <br/>
+          ${seed} <br/>
           ${htmlContent}
         </body>
       </html>
@@ -97,6 +102,7 @@ app.use(express.static('public'));
 // Serve the root file (index.md)
 app.get('/', (req, res) => {
   const filePath = path.join(__dirname, 'index.md');
+  console.log("Got '/'")
   renderMarkdownFile(filePath, res);
 });
 
