@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: white;
   padding: 20px;
 }
 
@@ -29,7 +29,7 @@ blockquote {
   border-left: 4px solid #007bff; /* Blue left border */
   margin: 10px 0; /* Margin around the blockquote */
   padding: 10px 20px; /* Padding inside the blockquote */
-  background-color: white; /* white */
+  background-color: #f4f4f4;
   color: #555; /* Text color */
   font-style: italic; /* Italicize text */
   quotes: "“" "”" "‘" "’"; /* Custom quotes */
