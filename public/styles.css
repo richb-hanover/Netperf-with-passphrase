@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+pre {
+  background-color: #e1e1e1;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 12px;
+}
+
+blockquote {
+  border-left: 4px solid #007bff; /* Blue left border */
+  margin: 10px 0; /* Margin around the blockquote */
+  padding: 10px 20px; /* Padding inside the blockquote */
+  background-color: white; /* white */
+  color: #555; /* Text color */
+  font-style: italic; /* Italicize text */
+  quotes: "“" "”" "‘" "’"; /* Custom quotes */
+}

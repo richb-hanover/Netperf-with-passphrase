@@ -7,6 +7,10 @@ require_once 'Parsedown.php';
 //     return file_get_contents($filename);
 // }
 
+// Read the HTML template
+$html_template = file_get_contents('public/index.html');
+
+
 // Read the Markdown file
 $markdown_content = file_get_contents('./index.md');
 
@@ -20,6 +24,9 @@ $markdown_content = str_replace('{passphrase}', $passphrase, $markdown_content);
 $Parsedown = new Parsedown();
 $html_content = $Parsedown->text($markdown_content);
 
+// Plop the $html_content into the $html_template
+$html_template = str_replace('{body}', $html_content, $html_template)
+
 // Output the HTML
-echo $html_content;
+echo $html_template;
 ?>
