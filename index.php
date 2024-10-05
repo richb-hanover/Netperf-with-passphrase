@@ -26,6 +26,7 @@ $html_content = $Parsedown->text($markdown_content);
 // Plop the $html_content into the $html_template
 $html_template = str_replace('{body}', $html_content, $html_template);
 
+
 // Output the HTML
 echo $html_template;
 ?>
