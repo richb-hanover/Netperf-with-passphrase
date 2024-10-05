@@ -34,6 +34,8 @@ and the _passphrase.txt_ shown in the web page.
 This site runs as a virtual host on atl.richb-hanover.com.
 The VirtualHost config file sets the DocumentRoot to _/home/netperf/Netperf-with-passphrase_. 
 
+Test the page locally using `php -S localhost:8000`
+
 ## Deploying
 
 To deploy this site after all the permissions are in place,
