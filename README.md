@@ -37,19 +37,6 @@ The VirtualHost config file sets the DocumentRoot to _/home/netperf/Netperf-with
 ## Deploying
 
 To deploy this site after all the permissions are in place,
-log in as `deploy` and use these steps to:
+log in as `deploy` and use the _deploy.sh_ script.
 
-1. Create a copy of the repo in the `deploy` home directory
-2. Copy all the files to the _/home/netperf/_ directory to be used in production.
-
-```
-# One time
-cd && git clone https://github.com/richb-hanover/Netperf-with-passphrase.git
-# This saves the repo in /home/deploy/Netperf-with-passphrase
-
-# To re-deploy after changes
-cd Netperf-with-passphrase
-git pull
-sudo cp -r * /home/netperf/Netperf-with-passphrase/
-```
 
