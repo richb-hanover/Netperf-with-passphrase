@@ -10,7 +10,6 @@ require_once 'Parsedown.php';
 // Read the HTML template
 $html_template = file_get_contents('public/index.html');
 
-
 // Read the Markdown file
 $markdown_content = file_get_contents('./index.md');
 
@@ -25,7 +24,7 @@ $Parsedown = new Parsedown();
 $html_content = $Parsedown->text($markdown_content);
 
 // Plop the $html_content into the $html_template
-$html_template = str_replace('{body}', $html_content, $html_template)
+$html_template = str_replace('{body}', $html_content, $html_template);
 
 // Output the HTML
 echo $html_template;
