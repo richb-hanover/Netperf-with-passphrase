@@ -42,7 +42,7 @@ Test the page locally using `php -S localhost:8000`
 ## Deploying
 
 To deploy this site after all the permissions are in place,
-log in as `deploy` and use the _deploy.sh_ script.
+log in as `deploy` and use `sudo deploy.sh`.
 
 This re-runs the _update\_passphrase.sh_ script, 
 then copies the files to the _/home/netperf/public\_html_ directory.

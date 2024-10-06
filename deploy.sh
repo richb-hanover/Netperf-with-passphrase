@@ -11,4 +11,5 @@
 
 git pull
 sudo cp -r * /home/netperf/public_html/
-sudo sh /home/netperf/public_html/update_passphrase.sh
+cd /home/netperf/public_html
+sudo sh ./update_passphrase.sh
