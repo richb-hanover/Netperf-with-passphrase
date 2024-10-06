@@ -1,13 +1,14 @@
 #! /bin/sh
 
-# Script to deploy the Netperf-with-passphrase files
-# It's a hassle to pull from github.com and then 
-# get all the files into the right place.
+# Script to deploy the repo files to production
+# It's a hassle to pull the repo to the production directory
+# Instead, pull to a local directory in `deploy` 
+# update the passphrase and restart the netserver,
+# then copy the files to /home/netperf/public_html
 
-# Just use this script:
 # Log into deploy account, cd to Netperf-with-passphrase
 # then use this script
 
 git pull
-sudo cp -r * /home/netperf/Netperf-with-passphrase/
-sudo php /home/netperf/Netperf-with-passphrase/update_passphrase.sh
+sudo sh /home/netperf/public_html/update_passphrase.sh
+sudo cp -r * /home/netperf/public_html/
