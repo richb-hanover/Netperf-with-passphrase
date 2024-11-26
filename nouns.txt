@@ -1,5 +1,4 @@
 alley
-angel
 apple
 beach
 brain
@@ -26,7 +25,6 @@ paper
 peace
 plant
 power
-queen
 river
 roomy
 sense
@@ -43,8 +41,6 @@ title
 train
 voice
 water
-woman
 world
-wound
 youth
 zebra
